@@ -37,7 +37,6 @@
                 <li><a href="products.html">Products</a></li>
                 <li><a href="#blog">Our Thinking</a></li>
                 <li><a href="#careers">Careers</a></li>
-                <li><a href="#contact" class="btn btn-primary" style="padding: 10px 24px;">Connect with Us</a></li>
             </ul>
 
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -52,171 +51,63 @@
     <section class="hero" id="hero">
         <div class="hero-content container">
             <h1 class="hero-title">Intelligence<br>Engineered</h1>
-            <p class="hero-subtitle">Transform raw data into actionable intelligence with AI-powered solutions</p>
-            <div class="hero-cta">
-                <a href="products.html" class="btn btn-primary btn-lg">Explore Products</a>
-                <a href="#contact" class="btn btn-outline btn-lg">Get Started</a>
-            </div>
-        </div>
-
-        <div class="scroll-indicator" id="scrollIndicator">
-            <div class="scroll-mouse"></div>
-            <span>Scroll to explore</span>
+            <p class="hero-subtitle">Your Journey to a Digital Future. Our IT Solutions, Tailored to Your Needs.</p>
+            <a href="#contact" class="btn btn-primary btn-lg" style="margin-top: 20px;">Book Now</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section" id="about">
+    <!-- About Us Section -->
+    <section class="section" id="about" style="background: var(--bg-dark);">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Us</h2>
-                <p class="section-subtitle">Committed to Excellence in IT Services</p>
-            </div>
-
-            <div class="about-cards-container">
-                <!-- Our Vision Card -->
-                <div class="card vision-card">
-                    <div class="card-icon-large">🔭</div>
-                    <h3 class="card-title-large">Our Vision</h3>
-                    <p class="card-description-large">To be the global leader in data intelligence, pioneering
-                        transformative
-                        solutions that empower organizations to unlock unprecedented insights and drive innovation
-                        across every
-                        industry.</p>
-                    <a href="#contact" class="btn btn-explore">
-                        <span>Explore Vision</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
+            <div class="split-layout">
+                <div class="split-content">
+                    <span
+                        style="color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px;">About
+                        Us</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Committed to Excellence in
+                        IT Services</h2>
+                    <p class="section-description"
+                        style="margin-bottom: 24px; font-size: 1.1rem; color: var(--text-gray);">
+                        At Nefex, we deliver end-to-end IT and data solutions designed to empower businesses with
+                        clarity, efficiency, and innovation. From data engineering and analytics to cloud strategy,
+                        automation, and digital transformation, our team helps organizations turn complex challenges
+                        into scalable solutions.
+                    </p>
+                    <p class="section-description"
+                        style="margin-bottom: 32px; font-size: 1.1rem; color: var(--text-gray);">
+                        We combine deep technical expertise with a commitment to measurable impact — ensuring every
+                        service we deliver drives smarter decisions and sustainable growth.
+                    </p>
+                    <a href="whoweare.html" class="btn btn-primary btn-lg">Learn More &rarr;</a>
                 </div>
-
-                <!-- Our Mission Card -->
-                <div class="card mission-card">
-                    <div class="card-icon-large">🎯</div>
-                    <h3 class="card-title-large">Our Mission</h3>
-                    <p class="card-description-large">To architect the future of data-driven decision making through
-                        innovative
-                        solutions that seamlessly blend cutting-edge technology with business intelligence, ensuring
-                        measurable
-                        impact and sustainable growth.</p>
-                    <a href="#contact" class="btn btn-explore">
-                        <span>Explore Mission</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
+                <div class="split-image"
+                    style="min-height: 400px; background: rgba(255,255,255,0.05); border-radius: 16px;">
+                    <img src="assets/about_us_v2.png" alt="Team collaborating on IT solutions"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.3); display: block;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="section" id="products" style="background: var(--bg-dark);">
+    <!-- Tailored Solutions Section -->
+    <section class="section" id="tailored-solutions" style="background: rgba(255,255,255,0.02);">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Products</h2>
-                <p class="section-subtitle">AI-Powered Platforms for Modern Data Challenges</p>
-            </div>
-
-            <div class="grid-2">
-                <!-- FrostBI Product -->
-                <div class="card product-card">
-                    <div
-                        style="width: 100%; height: 240px; border-radius: 12px; margin-bottom: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                        <img src="assets/frostbi-dashboard.png" alt="FrostBI Platform"
-                            style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'">
-                    </div>
-                    <h3 class="card-title">FrostBI</h3>
-                    <p class="card-description" style="margin-bottom: 20px;">An AI-powered BI platform that
-                        transforms
-                        raw data
-                        into contextual insights through conversational analytics and automated
-                        visualizations.</p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 24px;">
-                        <li style="margin-bottom: 12px; color: var(--text-gray);">✓ Conversational Analytics
-                        </li>
-                        <li style="margin-bottom: 12px; color: var(--text-gray);">✓ Automated Visualizations
-                        </li>
-                        <li style="margin-bottom: 12px; color: var(--text-gray);">✓ Real-time Insights</li>
-                        <li style="margin-bottom: 12px; color: var(--text-gray);">✓ Multi-source Integration
-                        </li>
-                    </ul>
-                    <a href="products.html" class="btn btn-outline" style="width: 100%;">Learn More</a>
+            <div class="split-layout">
+                <div class="split-image">
+                    <img src="assets/tailored-solutions.jpg" alt="Team collaborating on RAG System Pipeline"
+                        style="width: 100%; height: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                 </div>
-
-                <!-- IceCube Product -->
-                <div class="card product-card">
-                    <div
-                        style="width: 100%; height: 240px; border-radius: 12px; margin-bottom: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                        <img src="assets/icecube-dashboard.png" alt="IceCube Platform"
-                            style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'">
-                    </div>
-                    <h3 class="card-title">IceCube</h3>
-                    <p class="card-description" style="margin-bottom: 20px;">An AI-powered Data Engineering
-                        platform
-                        that
-                        simplifies data workflows, pipeline processing, pipeline automation, and analytics in
-                        one unified
-                        platform.</p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 24px;">
-                        <li style="margin-bottom: 12px; color: var(--text-gray);">✓ Pipeline Automation</li>
-                        <li style="margin-bottom: 12px; color: var(--text-gray);">✓ Data Processing at Scale
-                        </li>
-                        <li style="margin-bottom: 12px; color: var(--text-gray);">✓ Unified Analytics</li>
-                        <li style="margin-bottom: 12px; color: var(--text-gray);">✓ Real-time Monitoring
-                        </li>
-                    </ul>
-                    <a href="products.html" class="btn btn-outline" style="width: 100%;">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our IT Services</h2>
-                <p class="section-subtitle">Comprehensive Solutions Tailored to Your Needs</p>
-            </div>
-
-            <div class="grid-4">
-                <div class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3 class="card-title">01. Data Engineering</h3>
-                    <p class="card-description">Build scalable data pipelines and optimize your data
-                        infrastructure for
-                        lightning-fast insights and seamless migrations.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">☁️</div>
-                    <h3 class="card-title">02. Cloud Architecture</h3>
-                    <p class="card-description">Design resilient, cost-efficient multi-cloud architectures
-                        that power
-                        growth and
-                        innovation at scale.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🤖</div>
-                    <h3 class="card-title">03. AI & Machine Learning</h3>
-                    <p class="card-description">Leverage cutting-edge AI/ML models to automate processes and
-                        uncover
-                        predictive
-                        insights from your data.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3 class="card-title">04. Business Intelligence</h3>
-                    <p class="card-description">Transform raw data into strategic insights with seamless BI
-                        integration
+                <div class="split-content">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">AI Solutions, Tailored to
+                        Your DNA</h2>
+                    <p class="section-description" style="margin-bottom: 32px; font-size: 1.1rem;">
+                        We don't just sell products; we build custom engines designed for your specific business needs.
+                        At NEFEX, we understand that every organization is unique. That's why we engineer bespoke AI and
+                        data architectures that integrate seamlessly with your existing ecosystem, driving efficiency
                         and
-                        interactive dashboards.</p>
+                        innovation from the inside out.
+                    </p>
+                    <a href="whatwedo.html" class="btn btn-primary btn-lg">Our Approach</a>
                 </div>
             </div>
         </div>
@@ -226,156 +117,93 @@
     <section class="section" id="stats" style="background: var(--bg-dark);">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Innovative Solutions for Businesses</h2>
+                <h2 class="section-title">INNOVATIVE SOLUTIONS<br>FOR BUSINESSES</h2>
             </div>
-
-            <div class="grid-4">
-                <div class="card" style="text-align: center;">
-                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 12px;"
-                        class="counter" data-target="8">8+</div>
-                    <h4 style="color: var(--text-white); margin-bottom: 8px;">Years of Experience</h4>
-                    <p style="color: var(--text-gray); font-size: 0.95rem;">A legacy of excellence in IT
-                        services</p>
+            <div class="stats-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-top: 48px;">
+                <!-- Stat 1 -->
+                <div class="stat-card"
+                    style="background: rgba(255,255,255,0.03); padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <h3 style="font-size: 3rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 8px;">8+
+                    </h3>
+                    <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-white); margin-bottom: 8px;">Years
+                        of Experience</p>
+                    <p style="color: var(--text-gray);">A legacy of excellence IT services.</p>
                 </div>
-
-                <div class="card" style="text-align: center;">
-                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 12px;"
-                        class="counter" data-target="70">70%</div>
-                    <h4 style="color: var(--text-white); margin-bottom: 8px;">Increase in Efficiency</h4>
-                    <p style="color: var(--text-gray); font-size: 0.95rem;">Streamlined operations and
-                        workflows</p>
+                <!-- Stat 2 -->
+                <div class="stat-card"
+                    style="background: rgba(255,255,255,0.03); padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <h3 style="font-size: 3rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 8px;">70%
+                    </h3>
+                    <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-white); margin-bottom: 8px;">
+                        Increase in Efficiency</p>
+                    <p style="color: var(--text-gray);">Streamlined operations and improved workflow.</p>
                 </div>
-
-                <div class="card" style="text-align: center;">
-                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 12px;"
-                        class="counter" data-target="90">90%</div>
-                    <h4 style="color: var(--text-white); margin-bottom: 8px;">Client Satisfaction</h4>
-                    <p style="color: var(--text-gray); font-size: 0.95rem;">Trusted by businesses across
-                        sectors</p>
-                </div>
-
-                <div class="card" style="text-align: center;">
-                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 12px;"
-                        class="counter" data-target="50">50+</div>
-                    <h4 style="color: var(--text-white); margin-bottom: 8px;">Projects Completed</h4>
-                    <p style="color: var(--text-gray); font-size: 0.95rem;">Delivering cutting-edge
-                        solutions</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us Section -->
-    <section class="section" id="why-us">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Partner with Us?</h2>
-                <p class="section-subtitle">You drive the vision. We'll engineer the momentum.</p>
-            </div>
-
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon">🚀</div>
-                    <h3 class="card-title">Cutting-Edge Technology</h3>
-                    <p class="card-description">From data strategy to full-scale product development — we
-                        architect,
-                        automate, and
-                        accelerate the future.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">💰</div>
-                    <h3 class="card-title">Cost-Effective Solutions</h3>
-                    <p class="card-description">Driving digital transformation with intelligent,
-                        cost-optimized
-                        architectures that
-                        scale seamlessly.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3 class="card-title">24/7 Support</h3>
-                    <p class="card-description">Continuous support powered by automation and expertise —
-                        ensuring your
-                        operations
-                        never skip a beat.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials" style="background: var(--bg-dark);">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Testimonials</h2>
-                <p class="section-subtitle">What Our Clients Say</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="card">
-                    <div style="font-size: 3rem; margin-bottom: 16px; opacity: 0.3;">💬</div>
-                    <h4 style="color: var(--text-white); margin-bottom: 12px; font-size: 1.1rem;">Data
-                        Engineering
-                        Excellence</h4>
-                    <p class="card-description" style="margin-bottom: 20px;">"From seamless data migrations
-                        to
-                        lightning-fast
-                        pipelines — NEFEX transformed our data into powerful, actionable insights that drive
-                        our
-                        business forward."
+                <!-- Stat 3 -->
+                <div class="stat-card"
+                    style="background: rgba(255,255,255,0.03); padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <h3 style="font-size: 3rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 8px;">90%
+                    </h3>
+                    <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-white); margin-bottom: 8px;">Client
+                        Satisfaction Rate</p>
+                    <p style="color: var(--text-gray);">Trusted by businesses across all sectors for superior service.
                     </p>
-                    <p style="color: var(--accent-cyan); font-weight: 600;">— Enterprise Client</p>
                 </div>
-
-                <div class="card">
-                    <div style="font-size: 3rem; margin-bottom: 16px; opacity: 0.3;">💬</div>
-                    <h4 style="color: var(--text-white); margin-bottom: 12px; font-size: 1.1rem;">Cloud
-                        Infrastructure
-                        Success
-                    </h4>
-                    <p class="card-description" style="margin-bottom: 20px;">"NEFEX helped us scale smarter
-                        — designing
-                        resilient,
-                        cost-efficient cloud architectures that power our growth and innovation while
-                        reducing
-                        overhead."</p>
-                    <p style="color: var(--accent-cyan); font-weight: 600;">— Technology Partner</p>
+                <!-- Stat 4 -->
+                <div class="stat-card"
+                    style="background: rgba(255,255,255,0.03); padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <h3 style="font-size: 3rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 8px;">10+
+                    </h3>
+                    <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-white); margin-bottom: 8px;">
+                        Projects Completed</p>
+                    <p style="color: var(--text-gray);">Delivering cutting-edge solutions for a seamless digital future.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Connect with Us Section -->
     <section class="section" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-subtitle">Ready to transform your data into intelligence? Get in touch
-                    with our team.
-                </p>
+                <h2 class="section-title">Connect with Us</h2>
+                <p class="section-subtitle">Ready to transform your data? Let's start the conversation.</p>
             </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <div style="max-width: 600px; margin: 0 auto;">
-                    <div class="card" style="padding: 48px;">
-                        <h3 style="margin-bottom: 24px;">Contact Information</h3>
-                        <p style="margin-bottom: 16px; color: var(--text-light);">
-                            <strong>Email:</strong> <a href="mailto:Info@nefex.com"
-                                style="color: var(--accent-cyan); text-decoration: none;">Info@nefex.com</a>
-                        </p>
-                        <p style="margin-bottom: 16px; color: var(--text-light);">
-                            <strong>Phone:</strong> <a href="tel:+917405220498"
-                                style="color: var(--accent-cyan); text-decoration: none;">+91 7405220498</a>
-                        </p>
-                        <p style="margin-bottom: 32px; color: var(--text-light);">
-                            <strong>Address:</strong> 500 Terry Francine St, San Francisco, CA 94158
-                        </p>
-                        <a href="mailto:Info@nefex.com" class="btn btn-primary" style="width: 100%;">Send us
-                            a
-                            Message</a>
+            <div class="contact-form-container"
+                style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.03); padding: 40px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="name"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Name</label>
+                        <input type="text" id="name" name="name" required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
                     </div>
-                </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="email"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Email</label>
+                        <input type="email" id="email" name="email" required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="subject"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Subject</label>
+                        <select id="subject" name="subject"
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                            <option value="general" style="background: var(--bg-dark);">General Inquiry</option>
+                            <option value="consulting" style="background: var(--bg-dark);">Consulting Services</option>
+                            <option value="products" style="background: var(--bg-dark);">Product Demo</option>
+                            <option value="careers" style="background: var(--bg-dark);">Careers</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 32px;">
+                        <label for="message"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
