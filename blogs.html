@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Blogs - NEFEX Technologies. Insights on AI, Data Engineering, Cloud Architecture, and Digital Transformation.">
+    <title>Blogs | NEFEX Technologies</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="assets/nefex-logo.png" alt="NEFEX Logo" style="height: 40px; margin-right: 10px;">
+                NEFEX
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="whoweare.html">Who We Are</a></li>
+                <li><a href="whatwedo.html">What We Do</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blogs.html" class="active" style="color: var(--accent-cyan);">Blogs</a></li>
+                <li><a href="index.html#careers">Careers</a></li>
+                <li><a href="index.html#contact" class="btn btn-primary" style="padding: 10px 24px;">Connect with Us</a>
+                </li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content container">
+            <h1 class="hero-title">Insights & Innovation</h1>
+            <p class="hero-subtitle" style="max-width: 900px;">
+                Explore the latest trends in AI, data engineering, cloud architecture, and digital transformation.
+                Dive into expert insights and thought leadership from the NEFEX team.
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Blog Section -->
+    <section class="section" style="background: var(--bg-dark); padding-top: 60px;">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 40px;">
+                <span
+                    style="color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 12px;">Featured</span>
+                <h2 class="section-title" style="text-align: left;">Latest from Our Experts</h2>
+            </div>
+
+            <!-- Featured Blog Card -->
+            <div
+                style="background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-height: 400px;">
+                <div
+                    style="background: linear-gradient(135deg, #00D4FF 0%, #0066CC 100%); min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-brain" style="font-size: 120px; color: rgba(255,255,255,0.2);"></i>
+                </div>
+                <div style="padding: 48px;">
+                    <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+                        <span
+                            style="background: rgba(0,212,255,0.1); color: var(--accent-cyan); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">AI
+                            & ML</span>
+                        <span style="color: var(--text-gray); font-size: 0.9rem;">Dec 1, 2025</span>
+                    </div>
+                    <h3
+                        style="font-size: 1.75rem; font-weight: 700; color: var(--text-white); margin-bottom: 16px; line-height: 1.3;">
+                        The Future of AI-Driven Data Analytics
+                    </h3>
+                    <p style="color: var(--text-gray); margin-bottom: 24px; line-height: 1.6;">
+                        Discover how artificial intelligence is revolutionizing data analytics, enabling businesses to
+                        make faster,
+                        smarter decisions with unprecedented accuracy.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-cyan); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition-smooth);">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid Section -->
+    <section class="section" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 48px;">
+                <h2 class="section-title">All Articles</h2>
+                <p class="section-subtitle">Explore our collection of insights, tutorials, and industry analysis</p>
+            </div>
+
+            <!-- Blog Categories Filter -->
+            <div style="display: flex; gap: 16px; margin-bottom: 48px; flex-wrap: wrap; justify-content: center;">
+                <button
+                    style="background: var(--accent-cyan); color: var(--bg-dark); padding: 10px 24px; border-radius: 24px; border: none; font-weight: 600; cursor: pointer; transition: var(--transition-smooth);">All</button>
+                <button
+                    style="background: rgba(255,255,255,0.05); color: var(--text-light); padding: 10px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); font-weight: 600; cursor: pointer; transition: var(--transition-smooth);">AI
+                    & ML</button>
+                <button
+                    style="background: rgba(255,255,255,0.05); color: var(--text-light); padding: 10px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); font-weight: 600; cursor: pointer; transition: var(--transition-smooth);">Data
+                    Engineering</button>
+                <button
+                    style="background: rgba(255,255,255,0.05); color: var(--text-light); padding: 10px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); font-weight: 600; cursor: pointer; transition: var(--transition-smooth);">Cloud</button>
+                <button
+                    style="background: rgba(255,255,255,0.05); color: var(--text-light); padding: 10px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); font-weight: 600; cursor: pointer; transition: var(--transition-smooth);">Business
+                    Intelligence</button>
+            </div>
+
+            <!-- Blog Cards Grid -->
+            <div class="grid-3">
+                <!-- Blog Card 1 -->
+                <div class="card" style="cursor: pointer; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: linear-gradient(135deg, #06D6A0 0%, #048A81 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-database" style="font-size: 64px; color: rgba(255,255,255,0.3);"></i>
+                    </div>
+                    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+                        <span
+                            style="background: rgba(6,214,160,0.1); color: #06D6A0; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Data
+                            Engineering</span>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Nov 28, 2025</span>
+                    </div>
+                    <h3 class="card-title" style="margin-bottom: 12px;">Building Scalable Data Pipelines</h3>
+                    <p class="card-description">
+                        Learn best practices for designing and implementing robust, scalable data pipelines that can
+                        handle massive volumes of data.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-cyan); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="card" style="cursor: pointer; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: linear-gradient(135deg, #9D4EDD 0%, #6B21A8 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-cloud" style="font-size: 64px; color: rgba(255,255,255,0.3);"></i>
+                    </div>
+                    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+                        <span
+                            style="background: rgba(157,78,221,0.1); color: #9D4EDD; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Cloud</span>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Nov 25, 2025</span>
+                    </div>
+                    <h3 class="card-title" style="margin-bottom: 12px;">Cloud Migration Strategies for Enterprises</h3>
+                    <p class="card-description">
+                        A comprehensive guide to planning and executing successful cloud migration projects for
+                        large-scale enterprise applications.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-cyan); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="card" style="cursor: pointer; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: linear-gradient(135deg, #FF6B6B 0%, #C92A2A 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-line" style="font-size: 64px; color: rgba(255,255,255,0.3);"></i>
+                    </div>
+                    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+                        <span
+                            style="background: rgba(255,107,107,0.1); color: #FF6B6B; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Business
+                            Intelligence</span>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Nov 22, 2025</span>
+                    </div>
+                    <h3 class="card-title" style="margin-bottom: 12px;">Real-Time Analytics: Turning Data into Action
+                    </h3>
+                    <p class="card-description">
+                        Explore how real-time analytics platforms are empowering businesses to make instant, data-driven
+                        decisions.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-cyan); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Blog Card 4 -->
+                <div class="card" style="cursor: pointer; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: linear-gradient(135deg, #FFB627 0%, #FF8A00 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-robot" style="font-size: 64px; color: rgba(255,255,255,0.3);"></i>
+                    </div>
+                    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+                        <span
+                            style="background: rgba(255,182,39,0.1); color: #FFB627; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">AI
+                            & ML</span>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Nov 20, 2025</span>
+                    </div>
+                    <h3 class="card-title" style="margin-bottom: 12px;">Machine Learning Operations: MLOps Best
+                        Practices</h3>
+                    <p class="card-description">
+                        Discover the essential practices for deploying, monitoring, and maintaining ML models in
+                        production environments.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-cyan); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Blog Card 5 -->
+                <div class="card" style="cursor: pointer; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: linear-gradient(135deg, #00D4FF 0%, #0066CC 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-lock" style="font-size: 64px; color: rgba(255,255,255,0.3);"></i>
+                    </div>
+                    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+                        <span
+                            style="background: rgba(0,212,255,0.1); color: var(--accent-cyan); padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Security</span>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Nov 18, 2025</span>
+                    </div>
+                    <h3 class="card-title" style="margin-bottom: 12px;">Data Security in the Cloud Era</h3>
+                    <p class="card-description">
+                        Essential strategies for protecting sensitive data in cloud environments while maintaining
+                        compliance and accessibility.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-cyan); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Blog Card 6 -->
+                <div class="card" style="cursor: pointer; transition: transform 0.3s ease;">
+                    <div
+                        style="height: 200px; background: linear-gradient(135deg, #06D6A0 0%, #048A81 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-code" style="font-size: 64px; color: rgba(255,255,255,0.3);"></i>
+                    </div>
+                    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+                        <span
+                            style="background: rgba(6,214,160,0.1); color: #06D6A0; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Development</span>
+                        <span style="color: var(--text-gray); font-size: 0.85rem;">Nov 15, 2025</span>
+                    </div>
+                    <h3 class="card-title" style="margin-bottom: 12px;">Modern API Design Patterns</h3>
+                    <p class="card-description">
+                        Explore contemporary API design patterns and best practices for building robust, scalable
+                        microservices architectures.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-cyan); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div style="text-align: center; margin-top: 48px;">
+                <button class="btn btn-primary btn-lg">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section" style="background: var(--bg-dark);">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <h2 class="section-title" style="margin-bottom: 16px;">Stay Updated</h2>
+                <p class="section-subtitle" style="margin-bottom: 32px;">
+                    Subscribe to our newsletter and get the latest insights delivered to your inbox.
+                </p>
+                <div style="display: flex; gap: 12px; max-width: 500px; margin: 0 auto;">
+                    <input type="email" placeholder="Enter your email"
+                        style="flex: 1; padding: 14px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none;">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo" style="font-size: 1.5rem; margin-bottom: 16px;">NEFEX</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 20px;">Intelligence Engineered</p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="https://www.linkedin.com/company/nefex-technologies/" target="_blank"
+                            style="color: var(--text-gray); font-size: 1.5rem; transition: var(--transition-smooth);"
+                            onmouseover="this.style.color='var(--accent-cyan)'"
+                            onmouseout="this.style.color='var(--text-gray)'">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.twitter.com/WixStudio" target="_blank"
+                            style="color: var(--text-gray); font-size: 1.5rem; transition: var(--transition-smooth);"
+                            onmouseover="this.style.color='var(--accent-cyan)'"
+                            onmouseout="this.style.color='var(--text-gray)'">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="whoweare.html">Who We Are</a></li>
+                        <li><a href="whatwedo.html">What We Do</a></li>
+                        <li><a href="blogs.html" style="color: var(--accent-cyan);">Blogs</a></li>
+                        <li><a href="index.html#careers">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html">FrostBI</a></li>
+                        <li><a href="products.html">IceCube</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:Info@nefex.com">Info@nefex.com</a></li>
+                        <li><a href="tel:+917405220498">+91 7405220498</a></li>
+                        <li><a href="index.html#contact">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 NEFEX Technologies. All rights reserved. | Intelligence Engineered</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
