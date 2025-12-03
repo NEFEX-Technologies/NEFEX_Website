@@ -6,15 +6,23 @@
 /* ===== CSS Variables ===== */
 :root {
   /* Colors - Professional Tech Palette */
-  --primary-navy: #1d1d1f; /* Apple dark gray */
-  --primary-blue: #0071e3; /* Apple blue */
-  --accent-cyan: #2997ff; /* Apple bright blue */
-  --accent-purple: #8668ff; /* Apple purple */
+  --primary-navy: #1d1d1f;
+  /* Apple dark gray */
+  --primary-blue: #0071e3;
+  /* Apple blue */
+  --accent-cyan: #2997ff;
+  /* Apple bright blue */
+  --accent-purple: #8668ff;
+  /* Apple purple */
   --text-white: #ffffff;
-  --text-light: rgba(255, 255, 255, 0.8); /* Apple text-white-80 */
-  --text-gray: #86868b; /* Apple gray */
-  --bg-dark: #1d1d1f; /* Apple dark gray */
-  --bg-darker: #000000; /* Pure black */
+  --text-light: rgba(255, 255, 255, 0.8);
+  /* Apple text-white-80 */
+  --text-gray: #86868b;
+  /* Apple gray */
+  --bg-dark: #1d1d1f;
+  /* Apple dark gray */
+  --bg-darker: #000000;
+  /* Pure black */
   --gradient-primary: linear-gradient(135deg, #0071e3 0%, #2997ff 100%);
   --gradient-dark: linear-gradient(180deg, #000000 0%, #1d1d1f 100%);
   --gradient-glow: radial-gradient(circle at center, rgba(41, 151, 255, 0.15) 0%, transparent 70%);
@@ -130,6 +138,8 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
@@ -216,7 +226,71 @@ p {
   border: 2px solid var(--primary-blue);
 }
 
-position: relative;
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--bg-darker);
+  padding-top: 80px;
+  /* Account for fixed header */
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.1) 0%, transparent 50%, var(--bg-darker) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 100px 20px 60px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 12vw, 8rem);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 32px;
+  background: linear-gradient(135deg, #ffffff 0%, #00d4ff 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--text-gray);
+  font-weight: 400;
+  margin: 0 auto 48px;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Sections & Headers ===== */
+.section {
+  padding: var(--section-padding);
+  position: relative;
 }
 
 .section-header {
@@ -247,6 +321,56 @@ position: relative;
   color: var(--text-gray);
   max-width: 700px;
   margin: 24px auto 0;
+}
+
+/* ===== Split Layout ===== */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 968px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ===== Contact Form ===== */
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== Blog Filters ===== */
+.blog-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary-blue);
+  color: var(--text-white);
+  border-color: var(--primary-blue);
 }
 
 /* ===== Grid Layouts ===== */

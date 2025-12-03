@@ -16,11 +16,10 @@
         rel="stylesheet">
 
     <!-- Font Awesome -->
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -59,15 +58,15 @@
         <div class="hero-content container">
             <h1 class="hero-title">What We Do</h1>
             <p class="hero-subtitle" style="max-width: 900px;">
-                At Nefex, we build intelligent systems that think, adapt, and evolve with purpose. We’re not here to
-                follow trends—we’re here to set new standards in data intelligence, automation, and AI-driven decision
+                At Nefex, we build intelligent systems that think, adapt, and evolve with purpose. We're not here to
+                follow trends—we're here to set new standards in data intelligence, automation, and AI-driven decision
                 making.
             </p>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="section" id="products-detailed">
+    <!-- Services Section -->
+    <section class="section" id="services">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our Services</h2>
@@ -76,30 +75,66 @@
 
             <div class="grid-3">
                 <div class="card">
-                    <div class="card-icon">☁️</div>
+                    <div class="card-icon"><i class="ph ph-cloud-arrow-up"></i></div>
                     <h3 class="card-title">Data Engineering & Cloud Modernization</h3>
                     <p class="card-description">
                         We build unified, secure, and scalable data platforms tailored to your ecosystem. From hybrid
                         data lakes to governed data pipelines—we design infrastructure that evolves with your growth.
                     </p>
+                    <a href="index.html#contact" class="btn btn-outline" style="margin-top: 20px;">Read More →</a>
                 </div>
 
                 <div class="card">
-                    <div class="card-icon">🤖</div>
+                    <div class="card-icon"><i class="ph ph-brain"></i></div>
                     <h3 class="card-title">AI & Advanced Analytics</h3>
                     <p class="card-description">
                         Predictive, prescriptive, and generative AI solutions crafted for real business impact. From ML
                         automation to natural language insights—we embed intelligence where it matters most.
                     </p>
+                    <a href="index.html#contact" class="btn btn-outline" style="margin-top: 20px;">Read More →</a>
                 </div>
 
                 <div class="card">
-                    <div class="card-icon">📊</div>
+                    <div class="card-icon"><i class="ph ph-chart-line-up"></i></div>
                     <h3 class="card-title">Business Intelligence & Visualization</h3>
                     <p class="card-description">
                         Because every number deserves a story. Our BI solutions translate complex datasets into dynamic,
                         visually stunning dashboards that drive strategic clarity.
                     </p>
+                    <a href="index.html#contact" class="btn btn-outline" style="margin-top: 20px;">Read More →</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="ph ph-shield-star"></i></div>
+                    <h3 class="card-title">Cybersecurity & Threat Intelligence</h3>
+                    <p class="card-description">
+                        AI-driven security operations with real-time threat detection, automated incident response, and
+                        advanced analytics. We protect your infrastructure with zero-trust architecture and continuous
+                        monitoring.
+                    </p>
+                    <a href="index.html#contact" class="btn btn-outline" style="margin-top: 20px;">Read More →</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="ph ph-heartbeat"></i></div>
+                    <h3 class="card-title">Healthcare & IoT Solutions</h3>
+                    <p class="card-description">
+                        Smart health systems combining medical IoT, remote patient monitoring, and AI-powered
+                        diagnostics. HIPAA-compliant data platforms that transform healthcare delivery and patient
+                        outcomes.
+                    </p>
+                    <a href="index.html#contact" class="btn btn-outline" style="margin-top: 20px;">Read More →</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="ph ph-globe"></i></div>
+                    <h3 class="card-title">Defence & Satellite Surveillance</h3>
+                    <p class="card-description">
+                        Geospatial intelligence and satellite image analytics for strategic monitoring. AI-powered
+                        threat detection, multi-source data fusion, and secure cloud infrastructure for defense
+                        operations.
+                    </p>
+                    <a href="index.html#contact" class="btn btn-outline" style="margin-top: 20px;">Read More →</a>
                 </div>
             </div>
         </div>
@@ -138,12 +173,12 @@
                 <div class="card" style="display: flex; flex-direction: column; justify-content: center;">
                     <h3 class="card-title">Why We Exist</h3>
                     <p class="card-description" style="margin-bottom: 20px;">
-                        Because data isn’t just numbers—it’s knowledge. & Intelligence isn’t just automation—it’s
+                        Because data isn't just numbers—it's knowledge. & Intelligence isn't just automation—it's
                         awareness.
                     </p>
                     <p class="card-description">
                         Nefex exists to bridge the human spark with digital intelligence, crafting systems that serve
-                        both business and society. We believe in progress that’s conscious, creative, and collective.
+                        both business and society. We believe in progress that's conscious, creative, and collective.
                     </p>
                 </div>
             </div>
@@ -155,7 +190,7 @@
         <div class="container">
             <h2 class="section-title" style="margin-bottom: 24px;">Join the Experience</h2>
             <p class="section-subtitle" style="max-width: 800px; margin: 0 auto 40px;">
-                Let’s build the next era of intelligent systems—together. Be it your data, your vision, or your
+                Let's build the next era of intelligent systems—together. Be it your data, your vision, or your
                 dream—Nefex will turn it into reality, one innovation at a time.
             </p>
             <a href="index.html#contact" class="btn btn-primary btn-lg">Start Your Journey</a>
@@ -173,11 +208,15 @@
                         <a href="https://www.linkedin.com/company/nefex-technologies/" target="_blank"
                             style="color: var(--text-gray); font-size: 1.5rem; transition: var(--transition-smooth);"
                             onmouseover="this.style.color='var(--accent-cyan)'"
-                            onmouseout="this.style.color='var(--text-gray)'"><i class="fab fa-linkedin"></i>`r`n </a>
+                            onmouseout="this.style.color='var(--text-gray)'">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
                         <a href="https://www.twitter.com/WixStudio" target="_blank"
                             style="color: var(--text-gray); font-size: 1.5rem; transition: var(--transition-smooth);"
                             onmouseover="this.style.color='var(--accent-cyan)'"
-                            onmouseout="this.style.color='var(--text-gray)'"><i class="fab fa-twitter"></i>`r`n </a>
+                            onmouseout="this.style.color='var(--text-gray)'">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -188,6 +227,20 @@
                         <li><a href="whatwedo.html" style="color: var(--accent-cyan);">What We Do</a></li>
                         <li><a href="blogs.html">Blogs</a></li>
                         <li><a href="index.html#careers">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html">FrostBI</a></li>
+                        <li><a href="products.html">IceCube</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
                         <li><a href="mailto:Info@nefex.com">Info@nefex.com</a></li>
                         <li><a href="tel:+917405220498">+91 7405220498</a></li>
                         <li><a href="index.html#contact">Get in Touch</a></li>
