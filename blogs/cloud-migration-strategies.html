@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cloud Migration Strategies for Enterprises: A Practical Guide for Modern Leaders - Learn proven strategies for successful cloud migration including the 5 R's, phased approach, and real-world success stories.">
+    <meta name="keywords"
+        content="Cloud Migration, Cloud Strategy, Enterprise Cloud, AWS, Azure, Hybrid Cloud, Digital Transformation">
+    <title>Cloud Migration Strategies for Enterprises | NEFEX Technologies</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .blog-post-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .blog-header {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .blog-category {
+            background: rgba(157, 78, 221, 0.1);
+            color: #9D4EDD;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .blog-date {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-white);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .blog-excerpt {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Podcast Player */
+        .podcast-player {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 48px;
+        }
+
+        .podcast-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .blog-content h2 {
+            color: var(--text-white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 56px;
+            margin-bottom: 24px;
+            padding-top: 24px;
+            border-top: 2px solid rgba(157, 78, 221, 0.2);
+        }
+
+        .blog-content h3 {
+            color: #9D4EDD;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        .blog-content p {
+            margin-bottom: 24px;
+        }
+
+        .blog-content ul,
+        .blog-content ol {
+            margin-bottom: 24px;
+            padding-left: 32px;
+        }
+
+        .blog-content li {
+            margin-bottom: 12px;
+        }
+
+        .blog-content strong {
+            color: var(--text-white);
+            font-weight: 600;
+        }
+
+        .blog-image {
+            margin: 48px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(157, 78, 221, 0.1);
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .blog-image-caption {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        .highlight-box {
+            background: rgba(157, 78, 221, 0.05);
+            border-left: 4px solid #9D4EDD;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .comparison-table th {
+            background: rgba(157, 78, 221, 0.1);
+            color: var(--text-white);
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            margin-top: 64px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 1.8rem;
+            }
+
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body style="background: #0A0E27; color: #E0E0E0; margin: 0; font-family: 'Inter', sans-serif;">
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/nefex-logo.png" alt="NEFEX Logo" style="height: 40px; margin-right: 10px;">
+                NEFEX
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../whoweare.html">Who We Are</a></li>
+                <li><a href="../whatwedo.html">What We Do</a></li>
+                <li><a href="../products.html">Products</a></li>
+                <li><a href="../blogs.html" class="active" style="color: var(--accent-cyan);">Blogs</a></li>
+                <li><a href="../index.html#careers">Careers</a></li>
+                <li><a href="../index.html#contact" class="btn btn-primary" style="padding: 10px 24px;">Connect with
+                        Us</a>
+                </li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Blog Post Content -->
+    <section class="section" style="padding-top: 120px; background: var(--bg-dark);">
+        <div class="blog-post-container">
+
+            <!-- Blog Header -->
+            <div class="blog-header">
+                <div class="blog-meta">
+                    <span class="blog-category"><i class="fas fa-cloud"></i> Cloud</span>
+                    <span class="blog-date"><i class="far fa-calendar"></i> November 25, 2025</span>
+                </div>
+                <h1 class="blog-title">Cloud Migration Strategies for Enterprises</h1>
+                <p class="blog-excerpt">
+                    A practical guide for modern leaders on planning and executing successful cloud migration projects
+                    for large-scale enterprise applications.
+                </p>
+            </div>
+
+            <!-- Podcast Player -->
+            <div class="podcast-player">
+                <div class="podcast-title">
+                    <i class="fas fa-podcast"></i>
+                    Listen to this article as a podcast
+                </div>
+                <audio controls>
+                    <source src="../assets/blog/podcasts/CloudMigrationStrategies.m4a" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 12px;">
+                    <i class="far fa-clock"></i> Duration: 15 minutes
+                </p>
+            </div>
+
+            <!-- Blog Content -->
+            <article class="blog-content">
+
+                <!-- Introduction -->
+                <h2>Introduction: More Than a Move, It's a Strategic Imperative</h2>
+
+                <p>
+                    Is your IT infrastructure an engine for innovation or an anchor holding you back? In today's
+                    competitive landscape, the decision to migrate to the cloud is a fundamental business strategy, not
+                    a simple IT project. For modern leaders, this is about positioning your organization to accelerate
+                    innovation, reduce infrastructure costs, lower time-to-market for new features, and optimize
+                    expensive software licensing.
+                </p>
+
+                <p>
+                    The shift is already well underway. Tech analysts predict that a staggering 75% of organizations
+                    will adopt cloud-based data infrastructure by 2026. A successful cloud migration is the critical
+                    first step toward building a more agile, resilient, and forward-thinking enterprise, ready to
+                    capitalize on the next wave of technological advancement.
+                </p>
+
+                <!-- Section 1 -->
+                <h2>1. Decoding the Cloud: Key Concepts for Decision-Makers</h2>
+
+                <p>
+                    Before charting your course, it's essential to understand the foundational concepts that will shape
+                    your strategy. This section demystifies the core terminology for a non-technical audience.
+                </p>
+
+                <h3>1.1. What is Cloud Migration?</h3>
+                <p>
+                    At its core, cloud migration is the process of moving your organization's data, applications, and
+                    workloads from an on-premises data center to a cloud-based infrastructure. This can also include
+                    moving assets from one cloud environment to another. It is the tactical execution of a strategic
+                    decision to leverage the power and flexibility of the cloud.
+                </p>
+
+                <h3>1.2. Understanding Your Cloud Environment Options</h3>
+                <p>
+                    Your cloud environment is the foundation of your digital infrastructure. The model you choose will
+                    depend on your specific needs for security, control, flexibility, and cost.
+                </p>
+
+                <ul>
+                    <li><strong>Public Cloud:</strong> Services and infrastructure are owned and operated by a
+                        third-party cloud provider (like AWS or Microsoft Azure) and delivered over the public internet.
+                        Think of it like the public electricity grid. You pay for what you use, and the provider manages
+                        all the complex infrastructure.</li>
+
+                    <li><strong>Private Cloud:</strong> A secure, proprietary cloud infrastructure that is operated
+                        solely for a single organization. This is like having your own power generator. It offers
+                        maximum control and security but requires you to manage and maintain it.</li>
+
+                    <li><strong>Hybrid Cloud:</strong> A strategic combination of public and private clouds, creating a
+                        single, flexible, and cost-effective IT infrastructure. This model is the best of both worlds,
+                        like using the public grid for most of your needs but keeping a private generator for your most
+                        critical, sensitive operations.</li>
+
+                    <li><strong>Multicloud:</strong> An approach that utilizes services from more than one public cloud
+                        provider. This strategy helps avoid vendor lock-in and allows an organization to select the best
+                        services from different providers for specific needs.</li>
+                </ul>
+
+                <h3>1.3. Section Takeaway</h3>
+                <p>
+                    The choice between public, private, hybrid, or multicloud is not a technical detail but a strategic
+                    business decision. The right model is the one that best aligns with your organization's specific
+                    security requirements, cost structure, and long-term flexibility goals.
+                </p>
+
+                <!-- Cloud Migration Guide Image -->
+                <div class="blog-image">
+                    <img src="assets/blog/images/cloud-migration-guide.jpg"
+                        alt="A Leader's Guide to Enterprise Cloud Migration">
+                    <p class="blog-image-caption">A Leader's Guide to Enterprise Cloud Migration - Key Concepts and
+                        Common Strategies</p>
+                </div>
+
+                <!-- Section 2 -->
+                <h2>2. The 5 "R"s of Migration: Choosing Your Strategic Approach</h2>
+
+                <p>
+                    Not all applications should be moved to the cloud in the same way. Selecting the right migration
+                    strategy for each workload is critical to maximizing your return on investment and ensuring a smooth
+                    transition. The five most common strategies, often called the "5 R's," provide a framework for these
+                    decisions.
+                </p>
+
+                <table class="comparison-table">
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Description</th>
+                        <th>Best For (Business Use Case)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Rehosting (Lift-and-Shift)</strong></td>
+                        <td>Migrating applications and data from on-site infrastructure to a cloud platform without
+                            making significant changes to the architecture.</td>
+                        <td>Quickly moving applications to the cloud to meet a pressing deadline, such as a data center
+                            closure, with minimal immediate changes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Replatforming (Lift-and-Reshape)</strong></td>
+                        <td>Making specific, minimal changes to an application's architecture—such as moving to a
+                            managed database service or using containers—to gain cloud benefits without a full rewrite.
+                        </td>
+                        <td>Modernizing applications to gain cloud benefits (like managed databases or containers)
+                            without the time and expense of a complete rewrite.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Refactoring (Rearchitecting)</strong></td>
+                        <td>Redesigning and redeveloping applications to fully utilize cloud-native capabilities,
+                            maximizing scalability, resilience, and efficiency.</td>
+                        <td>Mission-critical applications where maximizing the long-term business value of the cloud is
+                            the primary goal.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Repurchasing</strong></td>
+                        <td>Retiring an existing legacy application and replacing it with a modern, cloud-based Software
+                            as a Service (SaaS) alternative.</td>
+                        <td>Replacing non-core legacy systems like HR, CRM, or email with best-in-class SaaS solutions
+                            to reduce management overhead.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Retiring</strong></td>
+                        <td>Decommissioning outdated or unused applications that are identified during the assessment
+                            process.</td>
+                        <td>Reducing maintenance costs, eliminating redundant IT resources, and streamlining the
+                            migration by focusing only on critical applications.</td>
+                    </tr>
+                </table>
+
+                <h3>2.1. Section Takeaway</h3>
+                <p>
+                    A successful migration strategy is not a one-size-fits-all approach. Leaders must direct their teams
+                    to assess the entire application portfolio, assigning the most appropriate "R" strategy to each
+                    workload based on its business value, technical complexity, and strategic importance.
+                </p>
+
+                <!-- Section 3 -->
+                <h2>3. Your Migration Roadmap: A Phased Approach to Success</h2>
+
+                <p>
+                    A structured plan is essential to avoiding common pitfalls like budget overruns and timeline delays.
+                    Proven methodologies like the Microsoft Cloud Adoption Framework (CAF) provide a roadmap validated
+                    across thousands of organizational deployments spanning Fortune 500 enterprises to startups.
+                </p>
+
+                <h3>3.1. Phase 1: Strategy & Assessment</h3>
+                <p>
+                    This phase is about building the business alignment necessary to ensure the migration is not just an
+                    IT project, but a core business initiative. It is the foundation upon which the entire project is
+                    built.
+                </p>
+                <ul>
+                    <li>Articulate the business case for migration, defining the "why" behind the move.</li>
+                    <li>Assess existing IT infrastructure, applications, and data dependencies to identify what to move
+                        and how.</li>
+                    <li>Establish migration goals, priorities, and success metrics to ensure the project delivers
+                        quantifiable business outcomes.</li>
+                </ul>
+
+                <h3>3.2. Phase 2: Plan & Ready</h3>
+                <p>
+                    This phase is about translating strategy into a detailed blueprint for execution, ensuring the
+                    organization is fully prepared for the transformation.
+                </p>
+                <ul>
+                    <li>Select the cloud provider that best aligns with your business needs, technical requirements, and
+                        existing capabilities.</li>
+                    <li>Design the target cloud architecture, with a clear focus on security, compliance, resilience,
+                        and cost-efficiency.</li>
+                    <li>Prepare people, processes, and technology for the transformation, ensuring organizational
+                        readiness for the new operating model.</li>
+                </ul>
+
+                <h3>3.3. Phase 3: Adopt & Migrate</h3>
+                <p>
+                    Success in this phase is measured not just by technical deployment, but by validating the intended
+                    business value through rigorous testing and user feedback.
+                </p>
+                <ul>
+                    <li>Deploy production workloads in the new cloud environment according to the plan.</li>
+                    <li>Conduct rigorous functional, performance, and security testing to validate that applications are
+                        working correctly and securely.</li>
+                    <li>Gather feedback through user acceptance testing to confirm that the end-user experience meets or
+                        exceeds expectations.</li>
+                </ul>
+
+                <h3>3.4. Section Takeaway</h3>
+                <p>
+                    A methodical, phased approach, as outlined by frameworks validated across thousands of
+                    organizational deployments spanning Fortune 500 enterprises to startups, significantly reduces
+                    migration risks and ensures that the project remains aligned with strategic business objectives from
+                    start to finish.
+                </p>
+
+                <!-- Section 4 -->
+                <h2>4. Navigating Key Challenges: Governance, Security, and Cost</h2>
+
+                <p>
+                    A proactive approach to cloud transformation requires treating governance, security, and cost not as
+                    separate silos, but as interconnected pillars of a sound cloud strategy. Robust governance, for
+                    instance, is the mechanism that enforces both security policies and cost controls. Addressing these
+                    challenges from the outset is critical.
+                </p>
+
+                <h3>4.1. Establishing Governance and Compliance</h3>
+                <p>
+                    Robust governance is essential for maintaining control, ensuring compliance, and optimizing costs in
+                    the cloud. From day one, it's critical to define clear governance policies and automate compliance
+                    enforcement, especially when operating in regulated industries that must adhere to standards like
+                    SOC 2, PCI DSS, or HIPAA.
+                </p>
+
+                <h3>4.2. Fortifying Security</h3>
+                <p>
+                    While cloud providers implement extensive measures to protect data, security remains a shared
+                    responsibility. The cloud enables a more robust security posture through modern approaches like a
+                    "zero-trust" model, where no user or device is trusted by default, and continuous threat monitoring
+                    to protect workloads against evolving cyber threats.
+                </p>
+
+                <h3>4.3. Mastering Cost Optimization</h3>
+                <p>
+                    A primary executive concern is the risk of uncontrolled spending. The cloud's pay-as-you-go model
+                    offers significant cost-effectiveness, but it must be managed. Implementing proven patterns for
+                    resource rightsizing and cost management ensures you only pay for what you need and that your cloud
+                    investment is continuously optimized.
+                </p>
+
+                <!-- Section 5 -->
+                <h2>5. Real-World Success: Learning from Enterprise Leaders</h2>
+
+                <p>
+                    The best practices for cloud migration are not theoretical; they are proven by the success of
+                    enterprises that have already navigated this journey.
+                </p>
+
+                <h3>Salesforce: Fueling Innovation at Scale</h3>
+                <p>
+                    To meet the demands of its global customer base, Salesforce faced the challenge of scaling its
+                    Marketing Cloud platform. By strategically migrating the entire platform to AWS, Salesforce
+                    leveraged a more flexible and scalable infrastructure, enabling the company to innovate faster and
+                    deliver enhanced services worldwide.
+                </p>
+
+                <h3>Citizens Bank: Enhancing the Digital Customer Experience</h3>
+                <p>
+                    Citizens Bank aimed to improve its digital banking services and accelerate feature deployment.
+                    Through a mainframe modernization initiative with AWS, the bank moved core applications to the
+                    cloud, gaining the agility needed to develop and roll out new digital experiences that directly
+                    improve how customers interact with their services.
+                </p>
+
+                <h3>Thomson Reuters & Experian: Accelerating Transformation with AI</h3>
+                <p>
+                    Facing the complex task of modernizing legacy .NET applications, Thomson Reuters used an AI-powered
+                    tool that resulted in cutting costs by 30% while boosting transformation speed by an incredible 4x.
+                    Similarly, Experian used Agentic AI to automate 687,600 lines of code transformation, showcasing how
+                    advanced tools can turn a daunting migration challenge into a profound efficiency gain.
+                </p>
+
+                <!-- Section 6 -->
+                <h2>6. Beyond Day One: Continuous Optimization and Management</h2>
+
+                <p>
+                    The migration itself is not the finish line; it is the beginning of a new, more dynamic operational
+                    model. Post-migration success depends on a commitment to continuous management and optimization.
+                </p>
+
+                <ul>
+                    <li><strong>Continuous Performance Monitoring:</strong> This requires a dedicated focus on
+                        fine-tuning applications and streamlining resource usage to guarantee optimal and efficient
+                        performance in the new environment.</li>
+                    <li><strong>Cost Management (FinOps):</strong> This requires establishing a continuous FinOps
+                        discipline to actively monitor and optimize cloud spend, ensuring every dollar delivers maximum
+                        business value.</li>
+                    <li><strong>Driving Continuous Improvement:</strong> This means leveraging automation and DevOps
+                        best practices to achieve operational excellence, allowing your teams to manage the new
+                        environment efficiently and focus on innovation rather than routine maintenance.</li>
+                </ul>
+
+                <!-- Conclusion -->
+                <h2>Conclusion: Your Foundation for an AI-Ready Future</h2>
+
+                <p>
+                    A well-executed cloud migration is more than an infrastructure upgrade; it is the foundational step
+                    toward securing a long-term competitive advantage. It streamlines IT operations and reduces costs
+                    today, but more importantly, it makes your organization future-ready.
+                </p>
+
+                <p>
+                    By building a scalable, secure, and flexible cloud foundation, you unlock the ability to rapidly
+                    adopt and integrate transformative technologies like generative AI, advanced analytics, and the
+                    Internet of Things (IoT). Leaders who embrace this transformation are not just building a more
+                    efficient business for today—they are building an innovation engine for tomorrow.
+                </p>
+
+                <div class="highlight-box">
+                    <strong>Ready to start your cloud migration journey?</strong> At NEFEX Technologies, we specialize
+                    in enterprise cloud migration strategies and implementation.
+                    <a href="index.html#contact"
+                        style="color: #9D4EDD; text-decoration: underline; font-weight: 600;">Get in touch</a> to
+                    discuss how we can help you build a cloud-ready future.
+                </div>
+
+            </article>
+
+            <!-- Back to Blogs -->
+            <div class="back-to-blogs">
+                <a href="../blogs.html" class="btn btn btn-primary btn-lg">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo" style="font-size: 1.5rem; margin-bottom: 16px;">NEFEX</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 20px;">Intelligence Engineered</p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="https://www.linkedin.com/company/nefex-technologies/" target="_blank"
+                            style="color: var(--text-gray); font-size: 1.5rem; transition: var(--transition-smooth);"
+                            onmouseover="this.style.color='var(--accent-cyan)'"
+                            onmouseout="this.style.color='var(--text-gray)'">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.twitter.com/WixStudio" target="_blank"
+                            style="color: var(--text-gray); font-size: 1.5rem; transition: var(--transition-smooth);"
+                            onmouseover="this.style.color='var(--accent-cyan)'"
+                            onmouseout="this.style.color='var(--text-gray)'">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="../whoweare.html">Who We Are</a></li>
+                        <li><a href="../whatwedo.html">What We Do</a></li>
+                        <li><a href="../blogs.html" style="color: var(--accent-cyan);">Blogs</a></li>
+                        <li><a href="../index.html#careers">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="../products.html">FrostBI</a></li>
+                        <li><a href="../products.html">IceCube</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:Info@nefex.com">Info@nefex.com</a></li>
+                        <li><a href="tel:+917405220498">+91 7405220498</a></li>
+                        <li><a href="../index.html#contact">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 NEFEX Technologies. All rights reserved. | Intelligence Engineered</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts Disabled to prevent content disappearing -->
+    <!-- <script src="js/main.js"></script> -->
+</body>
+
+</html>
