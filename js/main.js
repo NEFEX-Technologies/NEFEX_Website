@@ -169,3 +169,48 @@ if (contactForm) {
 }
 
 
+// ===== Careers Application Form Handling =====
+const careersForm = document.querySelector('#apply form.contact-form');
+
+if (careersForm) {
+  careersForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerText;
+
+    submitBtn.innerText = 'Submitting...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(this);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch("https://formsubmit.co/ajax/admin@nefex.co.in", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+      .then(response => {
+        if (!response.ok) throw new Error(response.statusText);
+        return response.json();
+      })
+      .then(data => {
+        console.log('SUCCESS!', data);
+        alert('Application submitted successfully! We will get back to you soon.');
+        careersForm.reset();
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      })
+      .catch(error => {
+        console.log('FAILED...', error);
+        alert('Failed to submit application. Please try again or email us directly at admin@nefex.co.in');
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      });
+  });
+}
+
