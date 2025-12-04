@@ -117,11 +117,13 @@ if (contactForm) {
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalBtnText = submitBtn.innerText;
 
-    // Validate reCAPTCHA
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-      alert('Please complete the CAPTCHA verification.');
-      return;
+    // Validate reCAPTCHA (only if it exists on the page)
+    if (typeof grecaptcha !== 'undefined') {
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        alert('Please complete the CAPTCHA verification.');
+        return;
+      }
     }
 
     submitBtn.innerText = 'Sending...';
@@ -130,8 +132,14 @@ if (contactForm) {
     const formData = new FormData(this);
 
     const object = Object.fromEntries(formData);
-    // Add reCAPTCHA for validation but exclude it from email
-    object['g-recaptcha-response'] = recaptchaResponse;
+
+    // Add reCAPTCHA for validation but exclude it from email (only if reCAPTCHA exists)
+    if (typeof grecaptcha !== 'undefined') {
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (recaptchaResponse) {
+        object['g-recaptcha-response'] = recaptchaResponse;
+      }
+    }
 
     // Create clean object for email (without CAPTCHA response)
     const emailData = { ...object };
@@ -155,7 +163,9 @@ if (contactForm) {
         console.log('SUCCESS!', data);
         alert('Message sent successfully!');
         contactForm.reset();
-        grecaptcha.reset(); // Reset reCAPTCHA
+        if (typeof grecaptcha !== 'undefined') {
+          grecaptcha.reset(); // Reset reCAPTCHA
+        }
         submitBtn.innerText = originalBtnText;
         submitBtn.disabled = false;
       })
