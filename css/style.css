@@ -574,3 +574,313 @@ p {
 .glow {
   box-shadow: var(--shadow-glow);
 }
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE & TABLET
+   =================================== */
+
+/* ===== Tablet (≤768px) ===== */
+@media (max-width: 768px) {
+  /* Typography */
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  /* Layout Spacing */
+  :root {
+    --section-padding: 80px 0;
+    --container-padding: 0 20px;
+  }
+  
+  /* Navigation */
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: var(--bg-dark);
+    flex-direction: column;
+    padding: 40px 0;
+    transition: right 0.3s ease;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links li {
+    margin: 0;
+    padding: 0 30px;
+    width: 100%;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  /* Hero Section */
+  .hero {
+    min-height: 70vh;
+    padding-top: 100px;
+  }
+  
+  /* Grids */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .split-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .split-content, .split-image {
+    flex: 1;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 30px;
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* ===== Mobile (≤480px) ===== */
+@media (max-width: 480px) {
+  /* Typography */
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle, .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-description, p {
+    font-size: 0.95rem;
+  }
+  
+  /* Layout Spacing */
+  :root {
+    --section-padding: 60px 0;
+    --container-padding: 0 16px;
+  }
+  
+  /* Navigation */
+  .nav-links {
+    width: 100%;
+    right: -100%;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  /* Hero Section */
+  .hero {
+    min-height: 60vh;
+    padding-top: 80px;
+  }
+  
+  /* All Grids to Single Column */
+  .grid-2, .grid-3, .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+  
+  .btn-lg {
+    padding: 14px 28px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Forms */
+  .contact-form-container {
+    padding: 30px 20px !important;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+  
+  /* Cards */
+  .card {
+    padding: 24px;
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-section div {
+    justify-content: center;
+  }
+  
+  /* Podcast Player (Blog Pages) */
+  .podcast-player {
+    padding: 24px !important;
+  }
+  
+  audio {
+    width: 100%;
+    height: 40px;
+  }
+  
+  /* Blog Content */
+  .blog-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .blog-content h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  .blog-post-container {
+    padding: 30px 16px !important;
+  }
+  
+  /* Tables */
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 10px 8px;
+  }
+  
+  /* Images */
+  .split-image img {
+    border-radius: 12px;
+  }
+  
+  /* Modal Adjustments (Careers) */
+  .modal-content {
+    max-height: 90vh !important;
+    margin: 5% auto !important;
+    padding: 24px !important;
+  }
+  
+  /* Job Cards (Careers) */
+  .job-card {
+    padding: 24px !important;
+  }
+  
+  .job-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .job-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ===== Small Mobile (≤375px) ===== */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .contact-form-container {
+    padding: 24px 16px !important;
+  }
+}
+
+/* Blog Page Featured Card */
+@media (max-width: 768px) {
+  /* Featured blog card should stack on mobile */
+  .section [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Reduce padding on featured blog content */
+  .section [style*="padding: 48px"] {
+    padding: 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    max-height: none !important;
+  }
+  
+  .section [style*="min-height: 400px"] {
+    min-height: 250px !important;
+  }
+  
+  .section [style*="padding: 48px"] {
+    padding: 24px !important;
+  }
+}
