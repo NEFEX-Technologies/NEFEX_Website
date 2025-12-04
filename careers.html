@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description"
+        content="Join NEFEX Technologies - Explore exciting career opportunities in Data Engineering, Cloud Architecture, and Business Intelligence. Intelligence Engineered.">
+    <meta name="keywords"
+        content="Careers, Jobs, Data Engineer AWS, Data Engineer Azure, Power BI Analyst, NEFEX Hiring">
+    <title>Careers | NEFEX Technologies</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modal scroll and spacing fix -->
+    <style>
+        .modal-content {
+            max-height: 85vh !important;
+            overflow-y: auto !important;
+            margin: 2% auto !important;
+            padding: 30px !important;
+        }
+
+        .modal h2 {
+            margin-bottom: 30px !important;
+        }
+
+        .skill-category {
+            margin-bottom: 30px !important;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 16px !important;
+        }
+
+        .skill-tags {
+            gap: 12px !important;
+            margin-bottom: 8px !important;
+        }
+
+        /* Custom scrollbar */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: rgba(41, 151, 255, 0.5);
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: rgba(41, 151, 255, 0.7);
+        }
+    </style>
+
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1d1d1f 0%, #0a1628 100%);
+            margin: 5% auto;
+            padding: 40px;
+            border: 1px solid rgba(41, 151, 255, 0.3);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0, 102, 255, 0.4);
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close {
+            color: #86868b;
+            float: right;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #2997ff;
+        }
+
+        .modal h2 {
+            color: #ffffff;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-category {
+            margin-bottom: 24px;
+        }
+
+        .skill-category h3 {
+            color: #2997ff;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(41, 151, 255, 0.1);
+            border: 1px solid rgba(41, 151, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(41, 151, 255, 0.2);
+            border-color: #2997ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="assets/nefex-logo.png" alt="NEFEX Logo" style="height: 40px; margin-right: 10px;">
+                NEFEX
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="whoweare.html">Who We Are</a></li>
+                <li><a href="whatwedo.html">What We Do</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1 class="hero-title">Join Our<br>Team</h1>
+            <p class="hero-subtitle">Be part of something extraordinary. Build the future of data intelligence with
+                NEFEX.</p>
+        </div>
+    </section>
+
+    <!-- Why NEFEX Section -->
+    <section class="section" style="background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why NEFEX?</h2>
+                <p class="section-subtitle">We're not just building products — we're shaping the future of data-driven
+                    decision making.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="card-title">Innovation First</h3>
+                    <p class="card-description">Work on cutting-edge projects using the latest technologies in cloud,
+                        AI, and data engineering.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="card-title">Collaborative Culture</h3>
+                    <p class="card-description">Join a team of passionate engineers where your ideas matter and
+                        collaboration drives success.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="card-title">Growth Opportunities</h3>
+                    <p class="card-description">Continuous learning, mentorship, and career advancement in a
+                        fast-growing
+                        company.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section class="section" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Open Positions</h2>
+                <p class="section-subtitle">Explore opportunities to work with industry-leading tools and brilliant
+                    minds.</p>
+            </div>
+            <div class="grid-2" style="gap: 40px;">
+
+                <!-- Job 1: Data Engineer (AWS) -->
+                <div class="card" style="padding: 40px;">
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-size: 1.75rem; color: var(--text-white); margin-bottom: 8px;">Data Engineer
+                            (AWS)</h3>
+                        <p style="color: var(--accent-cyan); font-size: 1rem; font-weight: 600; margin-bottom: 8px;">2-3
+                            Years Experience</p>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin: 0;">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: var(--accent-cyan); margin-right: 6px;"></i>Remote
+                        </p>
+                    </div>
+                    <p style="color: var(--text-gray); line-height: 1.7; margin-bottom: 24px;">
+                        Design and build scalable data pipelines using AWS services. Work with S3, Glue, EMR, Redshift,
+                        and Lambda
+                        to transform raw data into actionable insights. Collaborate with cross-functional teams to
+                        deliver
+                        data-driven solutions.
+                    </p>
+                    <div style="margin-bottom: 24px;">
+                        <button onclick="openSkillsModal('aws')" class="btn btn-outline"
+                            style="width: auto; padding: 10px 24px;">
+                            <i class="fas fa-list-check" style="margin-right: 8px;"></i>View Key Skills
+                        </button>
+                    </div>
+                    <a href="#apply" class="btn btn-primary" style="width: 100%;">Apply Now</a>
+                </div>
+
+                <!-- Job 2: Data Engineer (Azure) -->
+                <div class="card" style="padding: 40px;">
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-size: 1.75rem; color: var(--text-white); margin-bottom: 8px;">Data Engineer
+                            (Azure)</h3>
+                        <p style="color: var(--accent-cyan); font-size: 1rem; font-weight: 600; margin-bottom: 8px;">2-3
+                            Years Experience</p>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin: 0;">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: var(--accent-cyan); margin-right: 6px;"></i>Remote
+                        </p>
+                    </div>
+                    <p style="color: var(--text-gray); line-height: 1.7; margin-bottom: 24px;">
+                        Build robust data solutions on Azure platform. Work with Azure Data Factory, Databricks, Synapse
+                        Analytics,
+                        and Azure Data Lake. Optimize data workflows and ensure high-performance data processing at
+                        scale.
+                    </p>
+                    <div style="margin-bottom: 24px;">
+                        <button onclick="openSkillsModal('azure')" class="btn btn-outline"
+                            style="width: auto; padding: 10px 24px;">
+                            <i class="fas fa-list-check" style="margin-right: 8px;"></i>View Key Skills
+                        </button>
+                    </div>
+                    <a href="#apply" class="btn btn-primary" style="width: 100%;">Apply Now</a>
+                </div>
+
+                <!-- Job 3: Power BI Analyst -->
+                <div class="card" style="padding: 40px;">
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-size: 1.75rem; color: var(--text-white); margin-bottom: 8px;">Power BI Analyst
+                        </h3>
+                        <p style="color: var(--accent-cyan); font-size: 1rem; font-weight: 600; margin-bottom: 8px;">1+
+                            Year Experience</p>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin: 0;">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: var(--accent-cyan); margin-right: 6px;"></i>Remote
+                        </p>
+                    </div>
+                    <p style="color: var(--text-gray); line-height: 1.7; margin-bottom: 24px;">
+                        Create compelling data visualizations and interactive dashboards. Transform complex datasets
+                        into
+                        actionable business insights. Work closely with stakeholders to understand requirements and
+                        deliver
+                        impactful BI solutions.
+                    </p>
+                    <div style="margin-bottom: 24px;">
+                        <button onclick="openSkillsModal('powerbi')" class="btn btn-outline"
+                            style="width: auto; padding: 10px 24px;">
+                            <i class="fas fa-list-check" style="margin-right: 8px;"></i>View Key Skills
+                        </button>
+                    </div>
+                    <a href="#apply" class="btn btn-primary" style="width: 100%;">Apply Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Modal -->
+    <div id="skillsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSkillsModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Application Section -->
+    <section class="section" id="apply" style="background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ready to Apply?</h2>
+                <p class="section-subtitle">Send us your resume and let's start the conversation.</p>
+            </div>
+            <div class="contact-form-container"
+                style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.03); padding: 40px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                <form action="https://formsubmit.co/admin@nefex.co.in" method="POST" class="contact-form">
+                    <input type="hidden" name="_cc" value="pranay.saywankar@nefex.co.in,aakash.pavale@nefex.co.in">
+                    <input type="hidden" name="_subject" value="New Job Application - NEFEX Careers">
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="name"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Full
+                            Name</label>
+                        <input type="text" id="name" name="name" required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="email"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Email</label>
+                        <input type="email" id="email" name="email" required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="phone"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Phone
+                            Number</label>
+                        <input type="tel" id="phone" name="phone" required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="position"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Position
+                            Applied For</label>
+                        <select id="position" name="position" required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                            <option value="" style="background: var(--bg-dark);">Select Position</option>
+                            <option value="Data Engineer (AWS)" style="background: var(--bg-dark);">Data Engineer (AWS)
+                            </option>
+                            <option value="Data Engineer (Azure)" style="background: var(--bg-dark);">Data Engineer
+                                (Azure)</option>
+                            <option value="Power BI Analyst" style="background: var(--bg-dark);">Power BI Analyst
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="experience"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Years
+                            of Experience</label>
+                        <input type="text" id="experience" name="experience" placeholder="e.g., 2-3 years" required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="resume"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Resume/CV
+                            Link</label>
+                        <input type="url" id="resume" name="resume" placeholder="Google Drive, Dropbox, LinkedIn, etc."
+                            required
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 32px;">
+                        <label for="message"
+                            style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Cover
+                            Letter / Additional Info</label>
+                        <textarea id="message" name="message" rows="5"
+                            style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo" style="font-size: 1.5rem; margin-bottom: 16px;">NEFEX</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 20px;">Intelligence Engineered</p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="https://www.linkedin.com/company/nefex-technologies/" target="_blank"
+                            style="color: var(--text-gray); font-size: 1.5rem; transition: var(--transition-smooth);"
+                            onmouseover="this.style.color='var(--accent-cyan)'"
+                            onmouseout="this.style.color='var(--text-gray)'"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.twitter.com/WixStudio" target="_blank"
+                            style="color: var(--text-gray); font-size: 1.5rem; transition: var(--transition-smooth);"
+                            onmouseover="this.style.color='var(--accent-cyan)'"
+                            onmouseout="this.style.color='var(--text-gray)'"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="whoweare.html">Who We Are</a></li>
+                        <li><a href="whatwedo.html">What We Do</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html">FrostBI</a></li>
+                        <li><a href="products.html">IceCube</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:Info@nefex.com">Info@nefex.com</a></li>
+                        <li><a href="tel:+917405220498">+91 7405220498</a></li>
+                        <li><a href="index.html#contact">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 NEFEX Technologies. All rights reserved. | Intelligence Engineered</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        const skillsData = {
+            aws: {
+                title: 'Data Engineer (AWS) - Key Skills',
+                categories: [
+                    {
+                        name: 'Core AWS Services',
+                        skills: ['S3', 'AWS Glue', 'EMR', 'Redshift', 'Lambda', 'EC2', 'Athena', 'Step Functions']
+                    },
+                    {
+                        name: 'Programming & Scripting',
+                        skills: ['Python', 'SQL', 'PySpark', 'Shell Scripting', 'Boto3']
+                    },
+                    {
+                        name: 'ETL & Data Processing',
+                        skills: ['Apache Spark', 'Airflow', 'ETL Design', 'Data Warehousing', 'Parquet/ORC']
+                    },
+                    {
+                        name: 'Additional Skills',
+                        skills: ['Git', 'CI/CD', 'CloudFormation', 'Terraform', 'Data Modeling']
+                    }
+                ]
+            },
+            azure: {
+                title: 'Data Engineer (Azure) - Key Skills',
+                categories: [
+                    {
+                        name: 'Core Azure Services',
+                        skills: ['Azure Data Factory', 'Azure Synapse Analytics', 'Azure Databricks', 'Azure Data Lake', 'Azure SQL', 'Azure Functions', 'Event Hubs']
+                    },
+                    {
+                        name: 'Programming & Scripting',
+                        skills: ['Python', 'SQL', 'PySpark', 'PowerShell', 'Scala']
+                    },
+                    {
+                        name: 'ETL & Data Processing',
+                        skills: ['Apache Spark', 'ADF Pipelines', 'Data Warehousing', 'Delta Lake', 'Stream Processing']
+                    },
+                    {
+                        name: 'Additional Skills',
+                        skills: ['Git', 'Azure DevOps', 'ARM Templates', 'Data Modeling', 'Power BI']
+                    }
+                ]
+            },
+            powerbi: {
+                title: 'Power BI Analyst - Key Skills',
+                categories: [
+                    {
+                        name: 'Core BI Skills',
+                        skills: ['Power BI Desktop', 'Power BI Service', 'DAX', 'Power Query (M)', 'Data Modeling', 'Report Design']
+                    },
+                    {
+                        name: 'Data Analysis',
+                        skills: ['SQL', 'Excel', 'Statistical Analysis', 'Data Visualization', 'KPI Development']
+                    },
+                    {
+                        name: 'Technical Skills',
+                        skills: ['Row-Level Security', 'Gateway Configuration', 'API Integration', 'Custom Visuals', 'Dataflows']
+                    },
+                    {
+                        name: 'Business & Communication',
+                        skills: ['Stakeholder Management', 'Requirements Gathering', 'Dashboard Best Practices', 'Storytelling with Data']
+                    }
+                ]
+            }
+        };
+
+        function openSkillsModal(role) {
+            const modal = document.getElementById('skillsModal');
+            const modalBody = document.getElementById('modalBody');
+            const data = skillsData[role];
+
+            let html = `<h2>${data.title}</h2>`;
+
+            data.categories.forEach(category => {
+                html += `
+                    <div class="skill-category">
+                        <h3>${category.name}</h3>
+                        <div class="skill-tags">
+                            ${category.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+
+            modalBody.innerHTML = html;
+            modal.style.display = 'block';
+        }
+
+        function closeSkillsModal() {
+            document.getElementById('skillsModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('skillsModal');
+            if (event.target == modal) {
+                closeSkillsModal();
+            }
+        }
+    </script>
+</body>
+
+</html>

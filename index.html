@@ -26,6 +26,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -43,7 +46,7 @@
                 <li><a href="whatwedo.html">What We Do</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="#careers">Careers</a></li>
+                <li><a href="careers.html">Careers</a></li>
             </ul>
 
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -179,7 +182,9 @@
             </div>
             <div class="contact-form-container"
                 style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.03); padding: 40px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-                <form action="#" method="POST" class="contact-form">
+                <form action="https://formsubmit.co/admin@nefex.co.in" method="POST" class="contact-form">
+                    <!-- CC to additional recipients -->
+                    <input type="hidden" name="_cc" value="pranay.saywankar@nefex.co.in,aakash.pavale@nefex.co.in">
                     <div class="form-group" style="margin-bottom: 20px;">
                         <label for="name"
                             style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: 500;">Name</label>
@@ -209,6 +214,9 @@
                         <textarea id="message" name="message" rows="5" required
                             style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease; resize: vertical;"></textarea>
                     </div>
+                    <!-- Google reCAPTCHA widget -->
+                    <div class="g-recaptcha" data-sitekey="6LcO5SAsAAAAAOCfEBhvwXVtp1JbYAvGhBqUbFHS"
+                        style="margin-bottom: 20px;"></div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                 </form>
             </div>

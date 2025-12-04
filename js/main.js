@@ -107,4 +107,65 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 counters.forEach(counter => counterObserver.observe(counter));
 
+// ===== Contact Form Handling with FormSubmit (AJAX) =====
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerText;
+
+    // Validate reCAPTCHA
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      alert('Please complete the CAPTCHA verification.');
+      return;
+    }
+
+    submitBtn.innerText = 'Sending...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(this);
+
+    const object = Object.fromEntries(formData);
+    // Add reCAPTCHA for validation but exclude it from email
+    object['g-recaptcha-response'] = recaptchaResponse;
+
+    // Create clean object for email (without CAPTCHA response)
+    const emailData = { ...object };
+    delete emailData['g-recaptcha-response'];
+
+    const json = JSON.stringify(emailData);
+
+    fetch("https://formsubmit.co/ajax/admin@nefex.co.in", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+      .then(response => {
+        if (!response.ok) throw new Error(response.statusText);
+        return response.json();
+      })
+      .then(data => {
+        console.log('SUCCESS!', data);
+        alert('Message sent successfully!');
+        contactForm.reset();
+        grecaptcha.reset(); // Reset reCAPTCHA
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      })
+      .catch(error => {
+        console.log('FAILED...', error);
+        alert('Failed to send message. Please try again.');
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      });
+  });
+}
+
 
