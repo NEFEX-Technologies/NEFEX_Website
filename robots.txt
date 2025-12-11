@@ -1,10 +1,18 @@
 User-agent: *
-Allow: /
+# Allow only homepage to be indexed
+Allow: /$
+Allow: /index.html$
+
+# Block all other pages from indexing
+Disallow: /whoweare
+Disallow: /whatwedo
+Disallow: /products
+Disallow: /blogs
+Disallow: /careers
+Disallow: /blogs/
+
+# Allow crawling of verification file
+Allow: /google66b65d02ddffbb9d.html
 
 # Sitemap location
 Sitemap: https://nefex.co.in/sitemap.xml
-
-# Disallow crawling of assets and scripts (optional - improves crawl efficiency)
-Disallow: /assets/
-Disallow: /js/
-Disallow: /css/
