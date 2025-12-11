@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nefex.co.in/sitemap.xml
+
+# Disallow crawling of assets and scripts (optional - improves crawl efficiency)
+Disallow: /assets/
+Disallow: /js/
+Disallow: /css/
