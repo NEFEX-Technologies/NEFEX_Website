@@ -1,0 +1,15 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=31536000, immutable
+
+/sitemap.xml
+  Cache-Control: public, max-age=0, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=0, must-revalidate
+
+/google66b65d02ddffbb9d.html
+  Cache-Control: public, max-age=0, must-revalidate

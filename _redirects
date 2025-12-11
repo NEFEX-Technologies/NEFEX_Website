@@ -1,0 +1,13 @@
+# Redirects for Netlify
+# Old Wix URLs to new structure (if applicable)
+
+# Redirect old homepage with trailing slashes
+/index.html /
+/home /
+
+# Force HTTPS
+http://nefex.co.in/* https://nefex.co.in/:splat 301!
+http://www.nefex.co.in/* https://nefex.co.in/:splat 301!
+
+# Redirect www to non-www
+https://www.nefex.co.in/* https://nefex.co.in/:splat 301!
