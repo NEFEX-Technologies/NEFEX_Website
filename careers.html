@@ -236,89 +236,9 @@
                 <p class="section-subtitle">Explore opportunities to work with industry-leading tools and brilliant
                     minds.</p>
             </div>
-            <div class="grid-2" style="gap: 40px;">
-
-                <!-- Job 1: Data Engineer (AWS) -->
-                <div class="card" style="padding: 40px;">
-                    <div style="margin-bottom: 20px;">
-                        <h3 style="font-size: 1.75rem; color: var(--text-white); margin-bottom: 8px;">Data Engineer
-                            (AWS)</h3>
-                        <p style="color: var(--accent-cyan); font-size: 1rem; font-weight: 600; margin-bottom: 8px;">2-3
-                            Years Experience</p>
-                        <p style="color: var(--text-gray); font-size: 0.9rem; margin: 0;">
-                            <i class="fas fa-map-marker-alt"
-                                style="color: var(--accent-cyan); margin-right: 6px;"></i>Remote
-                        </p>
-                    </div>
-                    <p style="color: var(--text-gray); line-height: 1.7; margin-bottom: 24px;">
-                        Design and build scalable data pipelines using AWS services. Work with S3, Glue, EMR, Redshift,
-                        and Lambda
-                        to transform raw data into actionable insights. Collaborate with cross-functional teams to
-                        deliver
-                        data-driven solutions.
-                    </p>
-                    <div style="margin-bottom: 24px;">
-                        <button onclick="openSkillsModal('aws')" class="btn btn-outline"
-                            style="width: auto; padding: 10px 24px;">
-                            <i class="fas fa-list-check" style="margin-right: 8px;"></i>View Key Skills
-                        </button>
-                    </div>
-                    <a href="#apply" class="btn btn-primary" style="width: 100%;">Apply Now</a>
-                </div>
-
-                <!-- Job 2: Data Engineer (Azure) -->
-                <div class="card" style="padding: 40px;">
-                    <div style="margin-bottom: 20px;">
-                        <h3 style="font-size: 1.75rem; color: var(--text-white); margin-bottom: 8px;">Data Engineer
-                            (Azure)</h3>
-                        <p style="color: var(--accent-cyan); font-size: 1rem; font-weight: 600; margin-bottom: 8px;">2-3
-                            Years Experience</p>
-                        <p style="color: var(--text-gray); font-size: 0.9rem; margin: 0;">
-                            <i class="fas fa-map-marker-alt"
-                                style="color: var(--accent-cyan); margin-right: 6px;"></i>Remote
-                        </p>
-                    </div>
-                    <p style="color: var(--text-gray); line-height: 1.7; margin-bottom: 24px;">
-                        Build robust data solutions on Azure platform. Work with Azure Data Factory, Databricks, Synapse
-                        Analytics,
-                        and Azure Data Lake. Optimize data workflows and ensure high-performance data processing at
-                        scale.
-                    </p>
-                    <div style="margin-bottom: 24px;">
-                        <button onclick="openSkillsModal('azure')" class="btn btn-outline"
-                            style="width: auto; padding: 10px 24px;">
-                            <i class="fas fa-list-check" style="margin-right: 8px;"></i>View Key Skills
-                        </button>
-                    </div>
-                    <a href="#apply" class="btn btn-primary" style="width: 100%;">Apply Now</a>
-                </div>
-
-                <!-- Job 3: Power BI Analyst -->
-                <div class="card" style="padding: 40px;">
-                    <div style="margin-bottom: 20px;">
-                        <h3 style="font-size: 1.75rem; color: var(--text-white); margin-bottom: 8px;">Power BI Analyst
-                        </h3>
-                        <p style="color: var(--accent-cyan); font-size: 1rem; font-weight: 600; margin-bottom: 8px;">1+
-                            Year Experience</p>
-                        <p style="color: var(--text-gray); font-size: 0.9rem; margin: 0;">
-                            <i class="fas fa-map-marker-alt"
-                                style="color: var(--accent-cyan); margin-right: 6px;"></i>Remote
-                        </p>
-                    </div>
-                    <p style="color: var(--text-gray); line-height: 1.7; margin-bottom: 24px;">
-                        Create compelling data visualizations and interactive dashboards. Transform complex datasets
-                        into
-                        actionable business insights. Work closely with stakeholders to understand requirements and
-                        deliver
-                        impactful BI solutions.
-                    </p>
-                    <div style="margin-bottom: 24px;">
-                        <button onclick="openSkillsModal('powerbi')" class="btn btn-outline"
-                            style="width: auto; padding: 10px 24px;">
-                            <i class="fas fa-list-check" style="margin-right: 8px;"></i>View Key Skills
-                        </button>
-                    </div>
-                    <a href="#apply" class="btn btn-primary" style="width: 100%;">Apply Now</a>
+            <div class="grid-2" id="jobs-container" style="gap: 40px;">
+                <div style="color: white; grid-column: 1/-1; text-align: center;" id="loading-jobs">
+                    Loading open positions...
                 </div>
 
             </div>
@@ -329,6 +249,9 @@
     <div id="skillsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeSkillsModal()">&times;</span>
+            <h2 id="modal-title"
+                style="color: #ffffff; margin-bottom: 24px; background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Key Skills</h2>
             <div id="modalBody"></div>
         </div>
     </div>
@@ -373,12 +296,6 @@
                         <select id="position" name="position" required
                             style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-white); font-family: var(--font-primary); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
                             <option value="" style="background: var(--bg-dark);">Select Position</option>
-                            <option value="Data Engineer (AWS)" style="background: var(--bg-dark);">Data Engineer (AWS)
-                            </option>
-                            <option value="Data Engineer (Azure)" style="background: var(--bg-dark);">Data Engineer
-                                (Azure)</option>
-                            <option value="Power BI Analyst" style="background: var(--bg-dark);">Power BI Analyst
-                            </option>
                         </select>
                     </div>
                     <div class="form-group" style="margin-bottom: 20px;">
@@ -534,20 +451,36 @@
         function openSkillsModal(role) {
             const modal = document.getElementById('skillsModal');
             const modalBody = document.getElementById('modalBody');
-            const data = skillsData[role];
+            let dataCategories;
 
-            let html = `<h2>${data.title}</h2>`;
+            // If the role is an object, it's dynamic data from the API
+            if (typeof role === 'object') {
+                document.getElementById('modal-title').innerText = role.title + ' - Key Skills';
+                dataCategories = role.categories;
+            } else {
+                // Fallback for hardcoded roles (if any)
+                const data = skillsData[role];
+                if (!data) return;
+                document.getElementById('modal-title').innerText = data.title;
+                dataCategories = data.categories;
+            }
 
-            data.categories.forEach(category => {
-                html += `
-                    <div class="skill-category">
-                        <h3>${category.name}</h3>
-                        <div class="skill-tags">
-                            ${category.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+            let html = '';
+
+            if (dataCategories && Array.isArray(dataCategories)) {
+                dataCategories.forEach(category => {
+                    html += `
+                        <div class="skill-category">
+                            <h3>${category.name || 'Skills'}</h3>
+                            <div class="skill-tags">
+                                ${(category.skills || []).map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                            </div>
                         </div>
-                    </div>
-                `;
-            });
+                    `;
+                });
+            } else {
+                html = '<p style="color:white;">No specific skills listed for this role.</p>';
+            }
 
             modalBody.innerHTML = html;
             modal.style.display = 'block';
@@ -565,8 +498,60 @@
             }
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const container = document.getElementById('jobs-container');
+            const loading = document.getElementById('loading-jobs');
+            const positionSelect = document.getElementById('position');
+
+            try {
+                const res = await fetch('/api/jobs');
+                const jobs = await res.json();
+
+                loading.style.display = 'none';
+
+                if (jobs.length === 0) {
+                    container.innerHTML = '<p style="color: var(--text-gray); grid-column: 1/-1; text-align: center;">No open positions available at the moment. Please check back later!</p>';
+                    return;
+                }
+
+                jobs.forEach(job => {
+                    // Create job card
+                    const html = `
+                        <div class="card" style="padding: 40px;">
+                            <div style="margin-bottom: 20px;">
+                                <h3 style="font-size: 1.75rem; color: var(--text-white); margin-bottom: 8px;">${job.title}</h3>
+                                ${job.experience ? `<p style="color: var(--accent-cyan); font-size: 1rem; font-weight: 600; margin-bottom: 8px;">${job.experience}</p>` : ''}
+                                ${job.location ? `<p style="color: var(--text-gray); font-size: 0.9rem; margin: 0;">
+                                    <i class="fas fa-map-marker-alt" style="color: var(--accent-cyan); margin-right: 6px;"></i>${job.location}
+                                </p>` : ''}
+                            </div>
+                            <p style="color: var(--text-gray); line-height: 1.7; margin-bottom: 24px;">${job.description.replace(/\n/g, '<br>')}</p>
+                            
+                            ${job.skills_data ? `
+                            <div style="margin-bottom: 24px;">
+                                <button class="btn btn-outline" style="width: auto; padding: 10px 24px;" onclick='openSkillsModal(${JSON.stringify({ title: job.title, categories: JSON.parse(job.skills_data) }).replace(/'/g, "&apos;")})'>
+                                    <i class="fas fa-list-check" style="margin-right: 8px;"></i>View Key Skills
+                                </button>
+                            </div>
+                            ` : ''}
+
+                            <a href="#apply" class="btn btn-primary" style="width: 100%;" onclick="document.getElementById('position').value = '${job.title}'">Apply Now</a>
+                        </div>
+                    `;
+                    container.insertAdjacentHTML('beforeend', html);
+
+                    // Add option to the apply form select
+                    positionSelect.insertAdjacentHTML('beforeend', `<option value="${job.title}" style="background: var(--bg-dark);">${job.title}</option>`);
+                });
+            } catch (error) {
+                console.error('Error fetching jobs:', error);
+                loading.textContent = 'Error loading positions. Please try again later.';
+            }
+        });
+    </script>
 </body>
 
 </html>
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
