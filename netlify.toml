@@ -1,4 +1,5 @@
 [build]
+  command = "cd api && npm install"
   functions = "api"
 
 [[redirects]]
